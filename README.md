@@ -1,0 +1,1 @@
+# cdk8s-ack-image-resizer
