@@ -30,6 +30,8 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk": "^2.1.0",
+    "cdk8s": "^2.2.58",
+    "cdk8s-cli": "^1.0.142",
     "esbuild": "^0.14.31",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",

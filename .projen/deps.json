@@ -25,6 +25,14 @@
       "type": "build"
     },
     {
+      "name": "cdk8s",
+      "type": "build"
+    },
+    {
+      "name": "cdk8s-cli",
+      "type": "build"
+    },
+    {
       "name": "esbuild",
       "type": "build"
     },
