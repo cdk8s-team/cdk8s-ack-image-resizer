@@ -1,4 +1,6 @@
-const { awscdk } = require('projen');
+const {
+  awscdk
+} = require('projen');
 const project = new awscdk.AwsCdkTypeScriptApp({
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
@@ -9,7 +11,18 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   devDeps: [
     'cdk8s',
     'cdk8s-cli',
-  ],             /* Build dependencies for this module. */
+  ],
+  /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });
+
+cdk8sImportTask = project.addTask('cdk8s:import');
+// cdk8sImportTask.
+project.gitignore.exclude(
+  '**/build/',
+  '**/.gradle',
+  '**/__snapshots',
+  '.DS_Store',
+);
+
 project.synth();

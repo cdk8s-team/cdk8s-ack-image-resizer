@@ -3,6 +3,7 @@
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",
+    "cdk8s:import": "npx projen cdk8s:import",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",

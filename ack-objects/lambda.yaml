@@ -1,0 +1,8 @@
+apiVersion: s3.services.k8s.aws/v1alpha1
+kind: Bucket
+metadata:
+  name: image-resizer-lambda-artifacts
+  annotations:
+    services.k8s.aws/region: eu-west-1
+spec:
+  name: image-resizer-lambda-artifacts

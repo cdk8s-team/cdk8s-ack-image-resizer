@@ -1,0 +1,17 @@
+apiVersion: s3.services.k8s.aws/v1alpha1
+kind: Bucket
+metadata:
+  name: ack-image-resizer
+spec:
+  name: ack-image-resizer
+  notification:
+    lambdaFunctionConfigurations:
+      - id: ack-image-resizer # fix docs as it is a list
+        events:
+        - "s3:ObjectCreated:*"
+        filter: 
+          key: 
+            filterRules:
+            - name: "Prefix"
+              value: "inbound/"
+        lambdaFunctionARN: arn:aws:lambda:eu-west-1:481121494044:function:image-resizer # function status.ackResourceMetadata.arn
