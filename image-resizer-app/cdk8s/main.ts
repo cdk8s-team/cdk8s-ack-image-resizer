@@ -1,3 +1,4 @@
+import { CoreV1Api, KubeConfig } from '@kubernetes/client-node';
 import { App, Chart, ChartProps } from 'cdk8s';
 import { Construct } from 'constructs';
 import { Role } from './imports/iam.services.k8s.aws';
@@ -9,37 +10,13 @@ export class MyChart extends Chart {
     super(scope, id, props);
 
     const appName = 'ack-image-resizer';
+    const region = 'eu-west-1';
+    const accountNumber = '481121494044';
     const defaultTag = {
       'key': 'application',
       'value': 'ack-image-resizer'
     }
     // define resources here
-    new Bucket(this, 'S3BucketResource' + appName, {
-      metadata: {
-        name: appName,
-        namespace: 'default',
-      },
-      spec: {
-        name: appName,
-        notification: {
-          lambdaFunctionConfigurations: [
-            {
-              id: appName,
-              events: [
-                's3:ObjectCreated:*'
-              ],
-              filter: {
-                key: {
-                  filterRules: [
-                    { name: 'Prefix', value: 'inbound/' }
-                  ]
-                }
-              },
-              lambdaFunctionArn: 'arn:aws:lambda:eu-west-1:481121494044:function:image-resizer',
-            }],
-        },
-      }
-    });
 
     new Role(this, 'IAMRoleResources' + appName, {
       metadata: {
@@ -74,14 +51,51 @@ export class MyChart extends Chart {
         memorySize: 512,
         timeout: 10,
         tracingConfig: { mode: 'Active' },
-        role: 'arn:aws:iam::481121494044:role/s3-java-functionRole-14HBJ7M2493ZN',
+        // role: 'arn:aws:iam::481121494044:role/s3-java-functionRole-14HBJ7M2493ZN',
+        role: 'arn:aws:iam::481121494044:role/' + appName,
 
       },
 
     });
+    new Bucket(this, 'S3BucketResource' + appName, {
+      metadata: {
+        name: appName,
+        namespace: 'default',
+      },
+      spec: {
+        name: appName,
+        notification: {
+          lambdaFunctionConfigurations: [
+            {
+              id: appName,
+              events: [
+                's3:ObjectCreated:*'
+              ],
+              filter: {
+                key: {
+                  filterRules: [
+                    { name: 'Prefix', value: 'inbound/' }
+                  ]
+                }
+              },
+              // lambdaFunctionArn: 'arn:aws:lambda:eu-west-1:481121494044:function:image-resizer',
+              lambdaFunctionArn: `arn:aws:lambda:${region}:${accountNumber}:function:${appName}`,
+            }],
+        },
+      }
+    });
+
   }
 }
 
 const app = new App();
 new MyChart(app, 'cdk8s');
 app.synth();
+
+const kc = new KubeConfig();
+kc.loadFromDefault();
+
+const k8sApi = kc.makeApiClient(CoreV1Api);
+k8sApi.listNamespacedPod('default').then((res) => {
+  console.log(res.body);
+});
