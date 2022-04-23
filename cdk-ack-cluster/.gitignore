@@ -49,3 +49,4 @@ junit.xml
 **/.gradle
 **/__snapshots
 .DS_Store
+cdk.context.json
