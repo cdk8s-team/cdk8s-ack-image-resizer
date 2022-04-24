@@ -1,3 +1,4 @@
+import * as cdk from 'aws-cdk-lib';
 import { App, aws_eks as eks, Stack, StackProps } from 'aws-cdk-lib';
 import { ManagedPolicy } from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
@@ -13,15 +14,29 @@ export class MyStack extends Stack {
     const ACKS3ServiceAccountName = 'ack-s3-controller';
     const ACKLambdaServiceAccountName = 'ack-lambda-controller';
     const ACKIAMServiceAccountName = 'ack-iam-controller';
+    const ClusterName = 'eks-ack-cdk8s';
+
+
     super(scope, id, props);
     // provisiong a cluster
     this.cluster =
       new eks.FargateCluster(this, 'eks-ack-cdk8s', {
         version: eks.KubernetesVersion.V1_21,
-        clusterName: 'eks-ack-cdk8s',
+        clusterName: ClusterName,
       });
     this.cluster.addFargateProfile('ACKFargateProfile', {
       selectors: [{ namespace: 'ack-system' }],
+    });
+
+    new cdk.CfnOutput(this, 'ACKClusterName', {
+      value: this.cluster.clusterName,
+      description: 'The name of the ACK Cluster',
+      exportName: 'ACKClusterName',
+    });
+    new cdk.CfnOutput(this, 'ACKClusterRoleARN', {
+      value: this.cluster.adminRole.roleArn,
+      description: 'The role of the ACK Cluster',
+      exportName: 'ACKClusterRoleARN',
     });
 
 
