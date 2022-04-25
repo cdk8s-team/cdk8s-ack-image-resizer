@@ -3,7 +3,6 @@
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",
-    "cdk8s:import": "npx projen cdk8s:import",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
@@ -26,14 +25,11 @@
     "projen": "npx projen"
   },
   "devDependencies": {
-    "@kubernetes/client-node": "^0.16.3",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk": "^2.21.1",
-    "cdk8s": "^2.2.76",
-    "cdk8s-cli": "^1.0.156",
     "esbuild": "^0.14.38",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",

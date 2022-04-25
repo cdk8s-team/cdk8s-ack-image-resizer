@@ -45,8 +45,3 @@ junit.xml
 /cdk.out/
 .cdk.staging/
 .parcel-cache/
-**/build/
-**/.gradle
-**/__snapshots
-.DS_Store
-cdk.context.json
