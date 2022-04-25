@@ -1,5 +1,0 @@
-language: typescript
-# app: node bin/image-resizer-cdk-app.ts
-app: node lib/image-resizer-cdk-app-stack.ts
-imports:
-  - ./lib/cdk8s/k8s
