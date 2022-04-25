@@ -33,10 +33,9 @@ export class ImageResizerCdkAppStack extends Stack {
     const cluster = importCluster(this, clusterName, clusterKubectlRole);
 
     const ackCdk8sApp = new cdk8s.App();
-    // const ackChart = new ACKChart(ackCdk8sApp, 'cdk8s');
     ackCdk8sApp.synth();
     cluster.addCdk8sChart('ACKCDK8sChart',
-      new ACKChart(ackCdk8sApp, 'ACKCDK8sChart'))
+      new ACKChart(ackCdk8sApp, 'ACKCDK8sChart'));
     // cons`ole.log(cluster.clusterArn);
     // cluster.addCdk8sChart
     // cluster.addCdk8sChart

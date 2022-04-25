@@ -51,9 +51,7 @@ export class ACKChart extends Chart {
         memorySize: 512,
         timeout: 10,
         tracingConfig: { mode: 'Active' },
-        // role: 'arn:aws:iam::481121494044:role/s3-java-functionRole-14HBJ7M2493ZN',
         role: `arn:aws:iam::${account}:role/${appName}`,
-        // role: 'arn:aws:iam::481121494044:role/' + appName,
 
       },
 
