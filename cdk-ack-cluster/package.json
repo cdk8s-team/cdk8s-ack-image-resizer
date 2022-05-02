@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-ack-image-resizer",
+  "name": "s3-image-resizer",
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",

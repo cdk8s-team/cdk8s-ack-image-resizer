@@ -2,7 +2,7 @@
 set -eo pipefail
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 AWS_REGION=$(aws configure get region)
-APP_NAME="ack-image-resizer"
+APP_NAME="s3-image-resizer"
 BUILD_TAG="latest"
 gradle build  
 docker build -t $APP_NAME:latest . 

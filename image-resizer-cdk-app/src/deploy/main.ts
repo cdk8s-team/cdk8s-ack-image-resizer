@@ -1,12 +1,12 @@
-import * as cdk8s from 'cdk8s';
 import * as cdk from 'aws-cdk-lib';
 import { aws_eks as eks } from 'aws-cdk-lib';
+import * as cdk8s from 'cdk8s';
 import { Construct } from 'constructs';
 import * as iam from './imports/iam.services.k8s.aws';
 import * as lambda from './imports/lambda.services.k8s.aws';
 import * as s3 from './imports/s3.services.k8s.aws';
 
-const APP_NAME = 'ack-image-resizer'
+const APP_NAME = 's3-image-resizer'
 
 export interface ImageResizerProps extends cdk8s.ChartProps {
   readonly region: string;
@@ -61,7 +61,7 @@ export class ImageResizer extends cdk8s.Chart {
         notification: {
           lambdaFunctionConfigurations: [{
             id: APP_NAME,
-            events: [ 's3:ObjectCreated:*'],
+            events: ['s3:ObjectCreated:*'],
             filter: { key: { filterRules: [{ name: 'Prefix', value: 'inbound/' }] } },
             lambdaFunctionArn: `arn:aws:lambda:${region}:${account}:function:${APP_NAME}`,
           }],

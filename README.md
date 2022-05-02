@@ -1,1 +1,1 @@
-# cdk8s-ack-image-resizer
+# s3-image-resizer

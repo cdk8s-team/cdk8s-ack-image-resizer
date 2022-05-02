@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { aws_eks as eks } from 'aws-cdk-lib';
-import { ManagedPolicy, IManagedPolicy } from 'aws-cdk-lib/aws-iam';
+import { IManagedPolicy, ManagedPolicy } from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
 
 const NAMESPACE_NAME = 'ack-system';
@@ -15,6 +15,7 @@ export class AckClusterStack extends cdk.Stack {
 
     this.cluster = new eks.FargateCluster(this, 'eks-ack-cdk8s', {
       version: eks.KubernetesVersion.V1_21,
+      clusterName: 'ack-cluster',
     });
 
     this.cluster.addFargateProfile('ACKFargateProfile', { selectors: [{ namespace: NAMESPACE_NAME }] });
@@ -69,10 +70,12 @@ export class AckClusterStack extends cdk.Stack {
 
 const app = new cdk.App();
 
-new AckClusterStack(app, 'ack-cluster', { env: {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION,
-}});
+new AckClusterStack(app, 'ack-cluster', {
+  env: {
+    account: process.env.CDK_DEFAULT_ACCOUNT,
+    region: process.env.CDK_DEFAULT_REGION,
+  }
+});
 
 app.synth();
 
