@@ -25,7 +25,6 @@ export class AckClusterStack extends cdk.Stack {
       kind: 'Namespace',
       metadata: { name: NAMESPACE_NAME },
     });
-
     this.addAckController('s3-chart', 'v0.1.0', ManagedPolicy.fromAwsManagedPolicyName('AmazonS3FullAccess'));
     this.addAckController('lambda-chart', 'v0.0.14', ManagedPolicy.fromAwsManagedPolicyName('AWSLambda_FullAccess'));
     this.addAckController('iam-chart', 'v0.0.13', ManagedPolicy.fromAwsManagedPolicyName('IAMFullAccess'));
@@ -47,6 +46,8 @@ export class AckClusterStack extends cdk.Stack {
 
     const sa = this.cluster.addServiceAccount(`${chart}-sa`, {
       namespace: NAMESPACE_NAME,
+      name: chart,
+
     });
 
     sa.node.addDependency(this.namespace);
@@ -60,12 +61,15 @@ export class AckClusterStack extends cdk.Stack {
       namespace: NAMESPACE_NAME,
       createNamespace: true,
       values: {
-        serviceAccount: { create: false },
+        serviceAccount: {
+          create: false,
+          name: chart,
+        },
         aws: { region: this.region },
       },
     });
 
-  }
+  };
 }
 
 const app = new cdk.App();

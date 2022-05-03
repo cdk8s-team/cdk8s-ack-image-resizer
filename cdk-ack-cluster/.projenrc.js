@@ -5,5 +5,6 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   defaultReleaseBranch: 'main',
   name: 's3-image-resizer',
 });
+project.addGitIgnore('cdk.context.json');
 
 project.synth();
