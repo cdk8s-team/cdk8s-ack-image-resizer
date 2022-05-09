@@ -1,4 +1,4 @@
-package deploy;
+package deploy.k8s;
 
 import java.util.Arrays;
 

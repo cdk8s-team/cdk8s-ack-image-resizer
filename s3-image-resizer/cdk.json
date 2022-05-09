@@ -1,3 +1,3 @@
 {
-  "app": "mvn -e -q compile exec:java -Dexec.mainClass=\"deploy.Main\""
+  "app": "mvn -e -q compile exec:java -Dexec.mainClass=\"deploy.aws.Stack\""
 }

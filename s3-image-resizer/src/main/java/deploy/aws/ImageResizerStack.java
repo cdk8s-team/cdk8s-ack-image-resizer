@@ -1,9 +1,10 @@
-package deploy;
+package deploy.aws;
 
 import software.amazon.awscdk.Stack;
 
 import org.cdk8s.App;
 
+import deploy.k8s.ImageResizerChart;
 import software.amazon.awscdk.Fn;
 import software.amazon.awscdk.services.eks.ICluster;
 import software.amazon.awscdk.services.eks.Cluster;
