@@ -1,0 +1,4 @@
+awsk8sservicesiam.Role=imports.aws.k8s.services.iam.Role
+awsk8sservicesiam.RoleProps=imports.aws.k8s.services.iam.RoleProps
+awsk8sservicesiam.RoleSpec=imports.aws.k8s.services.iam.RoleSpec
+awsk8sservicesiam.RoleSpecTags=imports.aws.k8s.services.iam.RoleSpecTags

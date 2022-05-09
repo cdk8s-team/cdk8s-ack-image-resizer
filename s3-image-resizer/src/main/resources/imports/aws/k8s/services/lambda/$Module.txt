@@ -1,0 +1,10 @@
+awsk8sserviceslambda.Function=imports.aws.k8s.services.lambda.Function
+awsk8sserviceslambda.FunctionProps=imports.aws.k8s.services.lambda.FunctionProps
+awsk8sserviceslambda.FunctionSpec=imports.aws.k8s.services.lambda.FunctionSpec
+awsk8sserviceslambda.FunctionSpecCode=imports.aws.k8s.services.lambda.FunctionSpecCode
+awsk8sserviceslambda.FunctionSpecDeadLetterConfig=imports.aws.k8s.services.lambda.FunctionSpecDeadLetterConfig
+awsk8sserviceslambda.FunctionSpecEnvironment=imports.aws.k8s.services.lambda.FunctionSpecEnvironment
+awsk8sserviceslambda.FunctionSpecFileSystemConfigs=imports.aws.k8s.services.lambda.FunctionSpecFileSystemConfigs
+awsk8sserviceslambda.FunctionSpecImageConfig=imports.aws.k8s.services.lambda.FunctionSpecImageConfig
+awsk8sserviceslambda.FunctionSpecTracingConfig=imports.aws.k8s.services.lambda.FunctionSpecTracingConfig
+awsk8sserviceslambda.FunctionSpecVpcConfig=imports.aws.k8s.services.lambda.FunctionSpecVpcConfig
