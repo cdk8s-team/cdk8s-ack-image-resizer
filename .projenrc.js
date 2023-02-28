@@ -11,6 +11,8 @@ const project = new Cdk8sTeamNodeProject({
   ]
 });
 
+project.gitignore.exclude('dist/**');
+project.gitignore.exclude('coverage/**');
 project.package.addField('private', true);
 project.package.addField('workspaces', {
   packages: ['packages/**']
