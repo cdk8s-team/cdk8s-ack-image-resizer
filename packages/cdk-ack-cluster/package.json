@@ -1,0 +1,22 @@
+{
+  "name": "cdk-ack-cluster",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "Apache-2.0",
+  "private": true,
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "synth": "node ./index.js"
+  },
+  "dependencies": {
+    "constructs": "^10.1.263",
+    "aws-cdk-lib": "^2.66.1"
+  }
+}
