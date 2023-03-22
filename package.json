@@ -26,10 +26,10 @@
   "devDependencies": {
     "@cdk8s/projen-common": "^0.0.296",
     "jest": "^29.5.0",
-    "jest-junit": "^13",
+    "jest-junit": "^15",
     "lerna": "^6.5.1",
     "npm-check-updates": "^16",
-    "projen": "^0.68.15"
+    "projen": "^0.69.4"
   },
   "engines": {
     "node": ">= 14.18.0"
