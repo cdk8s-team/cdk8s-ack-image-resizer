@@ -24,7 +24,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.296",
+    "@cdk8s/projen-common": "^0.0.298",
     "jest": "^29.5.0",
     "jest-junit": "^15",
     "lerna": "^6.5.1",
@@ -32,7 +32,7 @@
     "projen": "^0.69.4"
   },
   "engines": {
-    "node": ">= 14.18.0"
+    "node": ">= 14.17.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
