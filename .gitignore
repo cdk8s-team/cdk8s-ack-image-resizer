@@ -37,7 +37,7 @@ junit.xml
 /coverage/
 !/.github/workflows/build.yml
 !/.mergify.yml
-!/.github/workflows/upgrade.yml
+!/.github/workflows/upgrade-dependencies.yml
 !/.github/pull_request_template.md
 !/.npmrc
 !/CODE_OF_CONDUCT.md
@@ -52,5 +52,6 @@ junit.xml
 !/.github/workflows/security.yml
 !/.github/workflows/triage.yml
 !/.github/workflows/stale.yml
+!/.github/workflows/upgrade-configuration.yml
 dist/**
 coverage/**
