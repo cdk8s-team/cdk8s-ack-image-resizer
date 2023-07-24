@@ -1,1 +1,1 @@
-# s3-image-resizer
+# s3-image-resize
