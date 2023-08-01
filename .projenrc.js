@@ -8,7 +8,7 @@ const project = new Cdk8sTeamNodeProject({
   devDeps: [
     'lerna@^7.1.4',
     '@cdk8s/projen-common',
-  ]
+  ],
 });
 
 project.gitignore.exclude('dist/**');
