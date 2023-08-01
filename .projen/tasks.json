@@ -239,7 +239,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade jest jest-junit lerna npm-check-updates"
+          "exec": "yarn upgrade "
         },
         {
           "exec": "npx projen"
