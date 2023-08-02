@@ -6,7 +6,7 @@ const project = new Cdk8sTeamNodeProject({
   release: false,
   defaultReleaseBranch: 'main',
   devDeps: [
-    'lerna@^7.1.4',
+    'lerna',
     '@cdk8s/projen-common',
   ],
 });
