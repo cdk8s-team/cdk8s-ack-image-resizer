@@ -31,7 +31,7 @@
     "jest-junit": "^15",
     "lerna": "^7.1.5",
     "npm-check-updates": "^16",
-    "projen": "^0.72.18"
+    "projen": "^0.72.19"
   },
   "engines": {
     "node": ">= 16.20.0"
