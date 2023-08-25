@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@cdk8s/projen-common": "^0.0.448",
-    "jest": "^29.6.3",
+    "jest": "^29.6.4",
     "jest-junit": "^15",
     "lerna": "^7.1.5",
     "npm-check-updates": "^16",
