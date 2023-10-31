@@ -26,7 +26,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.462",
+    "@cdk8s/projen-common": "^0.0.463",
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "lerna": "^7.4.2",
