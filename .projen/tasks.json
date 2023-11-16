@@ -185,13 +185,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=jest,jest-junit,lerna,npm-check-updates"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=constructs,jest,jest-junit,lerna,npm-check-updates"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade jest jest-junit lerna npm-check-updates"
+          "exec": "yarn upgrade constructs jest jest-junit lerna npm-check-updates"
         },
         {
           "exec": "npx projen"
