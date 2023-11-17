@@ -26,13 +26,13 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.467",
+    "@cdk8s/projen-common": "^0.0.469",
     "constructs": "^10.0.0",
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "lerna": "^7.4.2",
     "npm-check-updates": "^16",
-    "projen": "^0.76.28"
+    "projen": "^0.76.29"
   },
   "engines": {
     "node": ">= 16.20.0"
