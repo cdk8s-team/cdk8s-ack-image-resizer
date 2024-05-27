@@ -31,15 +31,19 @@
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "lerna": "^7.4.2",
-    "projen": "^0.81.15"
+    "projen": "^0.81.16"
   },
   "engines": {
     "node": ">= 16.20.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
+    "coverageProvider": "v8",
     "clearMocks": true,
     "collectCoverage": true,
     "coverageReporters": [
