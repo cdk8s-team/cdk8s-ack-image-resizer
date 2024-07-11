@@ -2096,9 +2096,9 @@ ejs@^3.1.7:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.820:
-  version "1.4.823"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.823.tgz#38587f7aa55bed14930f04091dfc65c39a3d8bd7"
-  integrity sha512-4h+oPeAiGQOHFyUJOqpoEcPj/xxlicxBzOErVeYVMMmAiXUXsGpsFd0QXBMaUUbnD8hhSfLf9uw+MlsoIA7j5w==
+  version "1.4.825"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.825.tgz#2d9c3d1eb81a67ecea0c06bcf70740b00ba52718"
+  integrity sha512-OCcF+LwdgFGcsYPYC5keEEFC2XT0gBhrYbeGzHCx7i9qRFbzO/AqTmc/C/1xNhJj+JA7rzlN7mpBuStshh96Cg==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -3026,9 +3026,9 @@ istanbul-reports@^3.1.3:
     istanbul-lib-report "^3.0.0"
 
 jackspeak@^3.1.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.2.tgz#c3d1e00071d52dba8b0dac17cd2a12d0187d2989"
-  integrity sha512-qH3nOSj8q/8+Eg8LUPOq3C+6HWkpUioIjDsq1+D4zY91oZvpPttw8GwtF1nReRYKXl+1AORyFqtm2f5Q1SB6/Q==
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.3.tgz#8833a9d89ab4acde6188942bd1c53b6390ed5a8a"
+  integrity sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==
   dependencies:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
