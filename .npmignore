@@ -4,6 +4,5 @@
 junit.xml
 /coverage/
 permissions-backup.acl
-/.mergify.yml
 /.projenrc.js
 /.gitattributes
