@@ -2155,9 +2155,9 @@ ejs@^3.1.7:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.73:
-  version "1.5.126"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.126.tgz#51c3be94c25710f2f49ffddbab5aca8983e11e2f"
-  integrity sha512-AtH1uLcTC72LA4vfYcEJJkrMk/MY/X0ub8Hv7QGAePW2JkeUFHEL/QfS4J77R6M87Sss8O0OcqReSaN1bpyA+Q==
+  version "1.5.128"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.128.tgz#8ea537b369c32527b3cc47df7973bffe5d3c2980"
+  integrity sha512-bo1A4HH/NS522Ws0QNFIzyPcyUUNV/yyy70Ho1xqfGYzPUme2F/xr4tlEOuM6/A538U1vDA7a4XfCd1CKRegKQ==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -4653,9 +4653,9 @@ pify@^4.0.1:
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
 pirates@^4.0.4:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.6.tgz#3018ae32ecfcff6c29ba2267cbf21166ac1f36b9"
-  integrity sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.7.tgz#643b4a18c4257c8a65104b73f3049ce9a0a15e22"
+  integrity sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==
 
 pkg-dir@^4.2.0:
   version "4.2.0"
