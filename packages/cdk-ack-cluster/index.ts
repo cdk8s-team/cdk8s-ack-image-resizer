@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { aws_eks as eks } from 'aws-cdk-lib';
 import { IManagedPolicy, ManagedPolicy } from 'aws-cdk-lib/aws-iam';
+import { KubectlV32Layer } from '@aws-cdk/lambda-layer-kubectl-v32';
 import { Construct } from 'constructs';
 
 const NAMESPACE_NAME = 'ack-system';
@@ -14,8 +15,9 @@ export class AckClusterStack extends cdk.Stack {
     super(scope, id, props);
 
     this.cluster = new eks.FargateCluster(this, 'eks-ack-cdk8s', {
-      version: eks.KubernetesVersion.V1_21,
+      version: eks.KubernetesVersion.V1_32,
       clusterName: 'ack-cluster',
+      kubectlLayer: new KubectlV32Layer(this, 'kubectl'),
     });
 
     this.cluster.addFargateProfile('ACKFargateProfile', { selectors: [{ namespace: NAMESPACE_NAME }] });
