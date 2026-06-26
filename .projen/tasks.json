@@ -1,5 +1,5 @@
 {
-  "manifestVersion": 1,
+  "manifestVersion": 2,
   "env": {
     "PATH": "$(npx -c \"node --print process.env.PATH\")"
   },
@@ -74,7 +74,10 @@
       "description": "Synthesize project files",
       "steps": [
         {
-          "exec": "node .projenrc.js"
+          "execArgs": [
+            "node",
+            ".projenrc.js"
+          ]
         }
       ]
     },
@@ -113,10 +116,19 @@
       "description": "Creates the distribution package",
       "steps": [
         {
-          "exec": "mkdir -p dist/js"
+          "execArgs": [
+            "mkdir",
+            "-p",
+            "dist/js"
+          ]
         },
         {
-          "exec": "npm pack --pack-destination dist/js"
+          "execArgs": [
+            "npm",
+            "pack",
+            "--pack-destination",
+            "dist/js"
+          ]
         }
       ]
     },
@@ -207,7 +219,10 @@
       },
       "steps": [
         {
-          "exec": "echo No dependencies to upgrade."
+          "execArgs": [
+            "echo",
+            "No dependencies to upgrade."
+          ]
         }
       ]
     }
