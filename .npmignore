@@ -4,5 +4,5 @@
 junit.xml
 /coverage/
 permissions-backup.acl
-/.projenrc.js
 /.gitattributes
+/.projenrc.js
